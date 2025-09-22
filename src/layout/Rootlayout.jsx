@@ -6,9 +6,9 @@ function Rootlayout() {
   return (
     <div>
         <Navbar/>
-        {/* <div className="container">
+        <div className="container">
             <Outlet /> 
-        </div> */}
+        </div>
     </div>
   )
 }
