@@ -1,0 +1,84 @@
+.chef {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin-bottom: 5%;
+}
+
+.card {
+    position: relative;
+    max-width: 830px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    font-family: Arial, sans-serif;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+.card::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0; /* 👈 change to right:0 if you want gradient on right side */
+    width: 70%; /* how much of the image should have gradient */
+    height: 100%;
+    background: linear-gradient(to right, rgba(11, 4, 49, 0.6), transparent);
+}
+
+/* Top small banner */
+.tag {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    background: #fff;
+    color: #000;
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 600;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+    z-index: 2;
+}
+
+/* Overlay content */
+.content {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    color: #fff;
+    z-index: 2;
+}
+
+.content p {
+    margin: 0;
+    font-size: 14px;
+    color: #ffa733; /* orange text */
+}
+
+.content h2 {
+    margin: 6px 0 12px;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.btn {
+    background: #ff7b00;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 25px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.btn:hover {
+    background: #e66d00;
+}
