@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import "./FAQSection.css";
-import orderImg from "../assets/copy.png";
-import trackImg from "../assets/burger.png";
-import deliveryImg from "../assets/phone.png";
+import orderImg from "../../assets/copy.png";
+import trackImg from "../../assets/burger.png";
+import deliveryImg from "../../assets/phone.png";
 
 const FAQSection = () => {
   const [activeTab, setActiveTab] = useState("faq");

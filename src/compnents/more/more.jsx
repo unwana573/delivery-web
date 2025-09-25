@@ -1,7 +1,7 @@
 import "./more.css"
-import couple from "../assets/efhwveui-removebg-preview.png"
-import apple from "../assets/applestore.png"
-import google from "../assets/playstore.png"
+import couple from "../../assets/efhwveui-removebg-preview.png"
+import apple from "../../assets/applestore.png"
+import google from "../../assets/playstore.png"
 
 function More() {
     return(

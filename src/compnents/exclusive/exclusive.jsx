@@ -4,17 +4,17 @@ import { Navigation, Pagination, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import slider from "../assets/slider_11.jpg"
-import slider_1 from "../assets/slider_1.avif"
-import slider_2 from "../assets/slider_2.avif"
-import slider_3 from "../assets/slider_3.avif"
-import slider_4 from "../assets/slider_4.avif"
-import slider_5 from "../assets/slider_5.avif"
-import slider_6 from "../assets/slider_6.avif"
-import slider_7 from "../assets/slider_7.avif"
-import slider_8 from "../assets/slider_8.avif"
-import slider_9 from "../assets/slider_9.avif"
-import slider_10 from "../assets/slider_10.webp"
+import slider from "../../assets/slider_11.jpg"
+import slider_1 from "../../assets/slider_1.avif"
+import slider_2 from "../../assets/slider_2.avif"
+import slider_3 from "../../assets/slider_3.avif"
+import slider_4 from "../../assets/slider_4.avif"
+import slider_5 from "../../assets/slider_5.avif"
+import slider_6 from "../../assets/slider_6.avif"
+import slider_7 from "../../assets/slider_7.avif"
+import slider_8 from "../../assets/slider_8.avif"
+import slider_9 from "../../assets/slider_9.avif"
+import slider_10 from "../../assets/slider_10.webp"
 
 function Exclusive() {
     return (

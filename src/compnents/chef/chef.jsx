@@ -1,6 +1,6 @@
 import "./chef.css"
-import chefImg from "../assets/chef.jpg"
-import chefImg_1 from "../assets/deliver.jpg"
+import chefImg from "../../assets/chef.jpg"
+import chefImg_1 from "../../assets/deliver.jpg"
 
 function Chef() {
     return(

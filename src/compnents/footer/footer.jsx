@@ -1,7 +1,7 @@
 import "./footer.css";
-import footerlogo from "../assets/footer_logo.png";
-import applelogo from "../assets/applestore.png";
-import playstorelogo from "../assets/playstore.png";
+import footerlogo from "../../assets/footer_logo.png";
+import applelogo from "../../assets/applestore.png";
+import playstorelogo from "../../assets/playstore.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFacebook } from "@fortawesome/free-brands-svg-icons";
 import { faSquareInstagram } from "@fortawesome/free-brands-svg-icons";

@@ -4,16 +4,16 @@ import { Navigation, Pagination, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import order from "../assets/order.avif"
-import order_1 from "../assets/order_1.avif"
-import order_2 from "../assets/order_2.avif"
-import order_3 from "../assets/order_3.avif"
-import order_4 from "../assets/order_4.avif"
-import order_5 from "../assets/order_5.avif"
-import order_6 from "../assets/order_6.avif"
-import order_7 from "../assets/order_11.webp"
-import order_8 from "../assets/order_8.avif"
-import order_9 from "../assets/order_10.webp"
+import order from "../../assets/order.avif"
+import order_1 from "../../assets/order_1.avif"
+import order_2 from "../../assets/order_2.avif"
+import order_3 from "../../assets/order_3.avif"
+import order_4 from "../../assets/order_4.avif"
+import order_5 from "../../assets/order_5.avif"
+import order_6 from "../../assets/order_6.avif"
+import order_7 from "../../assets/order_11.webp"
+import order_8 from "../../assets/order_8.avif"
+import order_9 from "../../assets/order_10.webp"
 
 function Order() {
     const slides = [

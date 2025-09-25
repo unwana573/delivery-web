@@ -1,7 +1,9 @@
+import Mac from "../compnents/mac/mac";
+
 function Special_Offer(params) {
     return (
         <>
-        <h1>Special Offer</h1>
+        <Mac />
         </>
     );
 }
