@@ -1,11 +1,11 @@
 .food-slider-container {
-    width: 100%;
-    max-width: 1200px;
-    margin: 60px auto;
+  width: 100%;
+  max-width: 1200px;
+  margin: 60px auto;
 }
 
 .h1 {
-    margin-bottom: 3%;
+  margin-bottom: 3%;
 }
 
 .food-card {
@@ -42,4 +42,20 @@
   font-size: 14px;
   margin: 5px 0 0;
   color: #f97316; /* Orange */
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .food-slider-container {
+    margin: 40px 40px;
+    width: 700px;
+  }
+  
+}
+
+@media (min-width: 900px) and (max-width: 1024px) {
+  .food-slider-container {
+    margin: 40px 40px;
+    width: 900px;  
+  }
+  
 }

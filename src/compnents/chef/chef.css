@@ -82,3 +82,10 @@
 .btn:hover {
     background: #e66d00;
 }
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .chef {
+        margin-left: 2%;
+    }
+  
+}

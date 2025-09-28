@@ -76,3 +76,11 @@
     z-index: 2;
 }
 
+@media (min-width: 768px) and (max-width: 1024px) {
+    .ex-nav ul {
+        display: none;
+    }
+    .carousel-container{
+        margin: 20px;
+    }
+}

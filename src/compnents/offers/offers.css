@@ -1,0 +1,42 @@
+.off {
+    display: block;
+}
+
+.off_1 ul {
+    /* justify-self: center; */
+    display: flex;
+    align-items: center;
+    gap: 15%;
+    margin-left: 10%;
+}
+
+.off_1 input {
+    height: 50px;
+    width: 200px;
+    border-radius: 25px;
+    border-color: 2px black;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.off_2 ul {
+    /* justify-self: center; */
+    display: flex;
+    gap: 45px;
+    font-size: 20px;
+    background-color: #e7e6e6;
+    padding: 30px 50px;
+    border-color: 2px #494646;
+    margin: 40px 0;
+}   
+
+.off_2 li {
+    cursor: pointer;
+}
+
+.off_2 .active {
+    background-color: black;
+    padding: 13px 8px;
+    color: white;
+    border-radius: 25px;
+}

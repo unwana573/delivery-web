@@ -1,0 +1,67 @@
+.burgers-section {
+    padding: 50px;
+}
+
+.burgers-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.burger-card {
+    background: #fff;
+    border-radius: 10px;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    box-shadow: 10px 7px 9px rgba(0, 0, 0, 0.1);
+}
+
+.burger-info {
+    max-width: 60%;
+}
+
+.burger-info h4 {
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+
+.burgers-section h1 {
+    /* font-size: 16px; */
+    margin-bottom: 18px;
+}
+
+.burger-info p {
+    font-size: 13px;
+    color: #555;
+}
+
+.burger-info .price {
+    margin-top: 10px;
+    font-weight: bold;
+    color: black;
+}
+
+.burger-img-container {
+    position: relative;
+}
+
+.burger-img-container img {
+    width: 120px;
+    border-radius: 8px;
+}
+
+.add-btn {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    background: black;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 28px;
+    height: 28px;
+    font-size: 18px;
+    cursor: pointer;
+}

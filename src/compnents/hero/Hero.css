@@ -140,3 +140,16 @@ span {
 .hero-3 .sub-3 {
     margin-left: 25%;
 }
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .hero {
+        max-width: 730px ;
+        justify-self: center;
+    }
+    .hero-3 {
+        display: none;
+    }
+    /* .img-1 {
+        margin-right: 5000px;
+    } */
+}

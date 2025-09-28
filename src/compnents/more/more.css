@@ -52,3 +52,20 @@
 .more-2 ul img {
     height: 45px;
 }
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .more {
+        display: block;
+        width: 1000px;
+        margin: 55px;
+        /* padding: 100px; */
+    }     
+    .more-1 {
+        justify-self: center;
+        padding-bottom: 10px;
+    }
+    .more-2 {
+        justify-self: center;
+        padding-bottom: 10px;
+    }
+}

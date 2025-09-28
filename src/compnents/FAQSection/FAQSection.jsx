@@ -4,7 +4,7 @@ import orderImg from "../../assets/copy.png";
 import trackImg from "../../assets/burger.png";
 import deliveryImg from "../../assets/phone.png";
 
-const FAQSection = () => {
+function FAQSection() {
   const [activeTab, setActiveTab] = useState("faq");
 
   return (

@@ -36,7 +36,12 @@ function Exclusive() {
                 navigation
                 pagination={{ clickable: true }}
                 loop={true}
-                className="custom-swiper">
+                className="custom-swiper"
+                breakpoints={{
+                    320: { slidesPerView: 1 },  // phones
+                    480: { slidesPerView: 1 },  // small devices
+                    768: { slidesPerView: 2 },// desktops
+                }}>
                 <SwiperSlide>
                     <div className="slide-wrapper">
                         <img src={ slider } alt="Restaurant" className="slide-image" />

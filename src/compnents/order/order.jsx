@@ -39,7 +39,15 @@ function Order() {
                 slidesPerView={6}
                 navigation
                 pagination={{ clickable: true }}
-                loop>
+                loop
+                breakpoints={{
+                    320: { slidesPerView: 1 },  // phones
+                    480: { slidesPerView: 2 },  // small devices
+                    768: { slidesPerView: 3 },  // tablets
+                    900: { slidesPerView: 4 }, 
+                    1280: { slidesPerView: 6 }  // desktops
+                }}>
+    
                 {slides.map((slide, index) => (
                     <SwiperSlide key={index}>
                         <div className="food-card">
