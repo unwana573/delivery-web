@@ -109,3 +109,9 @@
   color: #555;
   margin-top: 10px;
 }
+
+@media (max-width: 768px) and (min-width: 300px) {
+    .faq-container {
+      display: none;
+    }
+}

@@ -41,7 +41,7 @@ function Order() {
                 pagination={{ clickable: true }}
                 loop
                 breakpoints={{
-                    320: { slidesPerView: 1 },  // phones
+                    300: { slidesPerView: 1 },  // phones
                     480: { slidesPerView: 2 },  // small devices
                     768: { slidesPerView: 3 },  // tablets
                     900: { slidesPerView: 4 }, 

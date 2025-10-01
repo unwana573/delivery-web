@@ -52,10 +52,18 @@
   
 }
 
+@media (max-width: 768px) and (min-width: 300px) {
+  .food-slider-container {
+    margin: 40px 40px;
+    width: auto;
+  }
+  
+}
+
 @media (min-width: 900px) and (max-width: 1024px) {
   .food-slider-container {
     margin: 40px 40px;
-    width: 900px;  
+    width: auto;  
   }
   
 }

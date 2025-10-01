@@ -12,3 +12,17 @@
     padding: 30px 0;
     cursor: pointer;
 }
+
+@media (max-width: 768px) and (min-width: 300px) {
+    .fig ul {
+        display: block;
+    }
+    .fig p {
+        display: block;
+        font-size: large;
+    }
+    .fig li {
+        padding: 20px 0;
+        font-size: large;
+    }
+}

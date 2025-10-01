@@ -73,3 +73,10 @@ a.active {
         width: 100% !important;
     }
 }
+
+@media (max-width: 768px) and (min-width: 300px) {
+    .navbar ul {
+        display: none;
+        justify-self: center;
+    }
+}

@@ -71,7 +71,7 @@ function All() {
     ];
 return (
     <>
-        {activeTab === "Burgers" && ( 
+        {/* {activeTab === "Burgers" && ( 
             <div className="burgers-section">
                 <h1>Burgers</h1>
                 <div className="burgers-grid">
@@ -90,7 +90,7 @@ return (
                     ))}
                 </div>
             </div>
-        )}
+        )} */}
 
         {/* {activeTab === "Fries" && ( 
             <div className="burgers-section">

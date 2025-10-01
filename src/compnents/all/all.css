@@ -16,6 +16,7 @@
     justify-content: space-between;
     align-items: flex-start;
     box-shadow: 10px 7px 9px rgba(0, 0, 0, 0.1);
+    width: auto;
 }
 
 .burger-info {
@@ -64,4 +65,33 @@
     height: 28px;
     font-size: 18px;
     cursor: pointer;
+}
+
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .burger-card {
+        margin-left: 10%;
+        /* display: block; */
+        width: 300px;
+    }
+    .burgers-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(300px, 1fr));
+        gap: 20px;
+    }
+}
+
+@media (max-width: 768px) and (min-width: 300px) {
+    .burger-card {
+        margin-left: 10%;
+        /* display: block; */
+        max-width: 500px;
+        height: 25vh;
+        width: auto;
+    }
+    .burgers-grid {
+        display: grid;
+        grid-template-columns: repeat(1, minmax(300px, 1fr));
+        gap: 20px;
+    }
 }

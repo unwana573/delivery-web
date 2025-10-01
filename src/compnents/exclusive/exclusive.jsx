@@ -41,6 +41,7 @@ function Exclusive() {
                     320: { slidesPerView: 1 },  // phones
                     480: { slidesPerView: 1 },  // small devices
                     768: { slidesPerView: 2 },// desktops
+                    1280: { slidesPerView: 3 },// desktops
                 }}>
                 <SwiperSlide>
                     <div className="slide-wrapper">

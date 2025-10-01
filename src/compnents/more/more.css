@@ -55,7 +55,7 @@
 
 @media (min-width: 768px) and (max-width: 1024px) {
     .more {
-        display: block;
+        /* display: block; */
         width: 1000px;
         margin: 55px;
         /* padding: 100px; */
@@ -67,5 +67,31 @@
     .more-2 {
         justify-self: center;
         padding-bottom: 10px;
+    }
+    .more-2 h2 {
+        width: 400px;
+    }
+}
+
+@media (max-width: 768px) and (min-width: 300px) {
+    .more {
+        display: block;
+        width: 1000px;
+        margin: 0 25px;
+        /* padding: 100px; */
+    }     
+    .more-1 {
+        justify-self: center;
+        padding-bottom: 10px;
+    }
+    .more-2 {
+        justify-self: center;
+        padding-bottom: 10px;
+    }
+    .more-2 h2 {
+        width: 400px;
+    }
+    .more-2 ul img {
+        /* padding-right: 1000%; */
     }
 }

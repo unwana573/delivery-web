@@ -36,3 +36,9 @@
 .info-window {
     font-size: 14px;
 }
+
+@media (max-width: 1024px) and (min-width: 300px) {
+    .map-container {
+        margin: 30px 0;
+    }
+}

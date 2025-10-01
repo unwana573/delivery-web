@@ -81,6 +81,18 @@
         display: none;
     }
     .carousel-container{
-        margin: 20px;
+        margin: 0 50px;
+        width: auto;
+    }
+}
+
+@media (max-width: 768px) and (min-width: 300px) {
+    .ex-nav ul {
+        display: none; 
+    }
+    .carousel-container{
+        /* margin: 10px 60px;  */
+        margin-left: 30px;
+        width: auto;
     }
 }

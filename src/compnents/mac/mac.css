@@ -51,3 +51,25 @@
 .mac_2 img {
     border-radius: 15px;
 }
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .mac_2 img {
+        max-width: 300px;
+        width: auto;
+    }
+    .mac_2 ol {
+        display: block;
+    }
+}
+
+@media (max-width: 768px) and (min-width: 300px) {
+    .mac_2 img {
+        display: none;
+        justify-self: center;
+    }
+    .mac_1, p  {
+        /* display: none; */
+        text-align: center;
+        justify-self: center;
+    }
+}
