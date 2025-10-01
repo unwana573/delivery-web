@@ -10,7 +10,7 @@ function Restaurant(params) {
         <>
         <Mac />
         <Offer />
-        <All />
+        {/* <All /> */}
         <Info />
         <Map />
         <Review />  
