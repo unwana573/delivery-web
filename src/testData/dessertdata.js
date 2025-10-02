@@ -1,14 +1,14 @@
-import burger1 from "../assets/burger_2.avif";
-import burger2 from "../assets/burge_1.avif";
-import burger3 from "../assets/burge.avif";
-import burger4 from "../assets/burger_3.jpg";
-import burger5 from "../assets/burger_4.jpg";
-import burger6 from "../assets/burger_5.jpg";
-import burger7 from "../assets/burger_6.jpg";
-import burger8 from "../assets/burger_7.jpg";
-import burger9 from "../assets/burger_8.jpg";
+import burger1 from "../assets/dessert1.jpg";
+import burger2 from "../assets/dessert2.jpg";
+import burger3 from "../assets/dessert3.jpg";
+import burger4 from "../assets/dessert4.jpg";
+import burger5 from "../assets/dessert5.jpg";
+import burger6 from "../assets/dessert6.jpg";
+import burger7 from "../assets/dessert7.jpg";
+import burger8 from "../assets/dessert8.jpg";
+import burger9 from "../assets/desserts9.jpg";
 
-const burgers = [
+const dessert = [
     {
       img: burger1,
       title: "Royal Cheese Burger with extra Fries",
@@ -74,4 +74,4 @@ const burgers = [
     },
   ];
 
-export default burgers;
+export default dessert;

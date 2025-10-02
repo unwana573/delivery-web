@@ -8,7 +8,7 @@ import burger7 from "../assets/burger_6.jpg";
 import burger8 from "../assets/burger_7.jpg";
 import burger9 from "../assets/burger_8.jpg";
 
-const burgers = [
+const sauces = [
     {
       img: burger1,
       title: "Royal Cheese Burger with extra Fries",
@@ -74,4 +74,4 @@ const burgers = [
     },
   ];
 
-export default burgers;
+export default sauces;

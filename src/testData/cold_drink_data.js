@@ -1,72 +1,72 @@
-import burger1 from "../assets/burger_2.avif";
-import burger2 from "../assets/burge_1.avif";
-import burger3 from "../assets/burge.avif";
-import burger4 from "../assets/burger_3.jpg";
-import burger5 from "../assets/burger_4.jpg";
-import burger6 from "../assets/burger_5.jpg";
-import burger7 from "../assets/burger_6.jpg";
-import burger8 from "../assets/burger_7.jpg";
-import burger9 from "../assets/burger_8.jpg";
+import cold1 from "../assets/cold_1.jpg";
+import cold2 from "../assets/cold_2.jpg";
+import cold3 from "../assets/cold_3.jpg";
+import cold4 from "../assets/cold_4.jpg";
+import cold5 from "../assets/cold_5.jpg";
+import cold6 from "../assets/cold_6.jpg";
+import cold7 from "../assets/cold_7.jpg";
+import cold8 from "../assets/cold_8.jpg";
+import cold9 from "../assets/cold_9.jpg";
 
-const burgers = [
+const cold_drink = [
     {
-      img: burger1,
+      img: cold1,
       title: "Royal Cheese Burger with extra Fries",
       description:
         "1 McChicken™, 1 Big Mac™, 1 Royal Cheeseburger, 2 medium sized French Fries, 3 cold drinks",
       price: "GBP 23.10",
     },
     {
-      img: burger2,
+      img: cold2,
       title: "The classics for 3",
       description:
         "1 McChicken™, 1 Big Mac™, 1 Royal Cheeseburger, 2 medium sized French Fries, 3 cold drinks",
       price: "GBP 23.10",
     },
     {
-      img: burger3,
+      img: cold3,
       title: "The classics for 3",
       description:
         "1 McChicken™, 1 Big Mac™, 1 Royal Cheeseburger, 2 medium sized French Fries, 3 cold drinks",
       price: "GBP 23.10",
     },
     {
-      img: burger4,
+      img: cold4,
       title: "The classics for 3",
       description:
         "1 McChicken™, 1 Big Mac™, 1 Royal Cheeseburger, 2 medium sized French Fries, 3 cold drinks",
       price: "GBP 23.10",
     },
     {
-      img: burger5,
+      img: cold5,
       title: "The classics for 3",
       description:
         "1 McChicken™, 1 Big Mac™, 1 Royal Cheeseburger, 2 medium sized French Fries, 3 cold drinks",
       price: "GBP 23.10",
     },
     {
-      img: burger6,
+      img: cold6,
       title: "The classics for 3",
       description:
         "1 McChicken™, 1 Big Mac™, 1 Royal Cheeseburger, 2 medium sized French Fries, 3 cold drinks",
       price: "GBP 23.10",
     },
     {
-      img: burger7,
+      img: cold7,
       title: "The classics for 3",
       description:
         "1 McChicken™, 1 Big Mac™, 1 Royal Cheeseburger, 2 medium sized French Fries, 3 cold drinks",
       price: "GBP 23.10",
     },
     {
-      img: burger8,
+      img: cold8,
       title: "The classics for 3",
       description:
         "1 McChicken™, 1 Big Mac™, 1 Royal Cheeseburger, 2 medium sized French Fries, 3 cold drinks",
       price: "GBP 23.10",
     },
     {
-      img: burger9,
+      img: cold9,
       title: "The classics for 3",
       description:
         "1 McChicken™, 1 Big Mac™, 1 Royal Cheeseburger, 2 medium sized French Fries, 3 cold drinks",
@@ -74,4 +74,4 @@ const burgers = [
     },
   ];
 
-export default burgers;
+export default cold_drink;

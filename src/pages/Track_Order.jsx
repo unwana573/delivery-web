@@ -1,3 +1,4 @@
+import OrderPage from "../compnents/all/all";
 import Info from "../compnents/info/info";
 import Mac from "../compnents/mac/mac";
 import Map from "../compnents/map/map";
@@ -7,6 +8,7 @@ function Track_Order(params) {
     return (
         <>
             <Mac />
+            <OrderPage />
             <Info />
             <Map /> 
             <Review />
