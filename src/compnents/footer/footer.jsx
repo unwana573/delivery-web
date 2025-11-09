@@ -1,77 +1,82 @@
 import "./footer.css";
-import footerlogo from "../../assets/footer_logo.png";
-import applelogo from "../../assets/applestore.png";
-import playstorelogo from "../../assets/playstore.png";
+import logo from "../../assets/logo.png";
+import apple from "../../assets/applestore.png";
+import google from "../../assets/playstore.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faFacebook } from "@fortawesome/free-brands-svg-icons";
-import { faSquareInstagram } from "@fortawesome/free-brands-svg-icons";
-import { faTiktok } from "@fortawesome/free-brands-svg-icons";
-import { faSnapchat } from "@fortawesome/free-brands-svg-icons";
-
+import { faFacebook, faInstagram, faTiktok, faSnapchat } from "@fortawesome/free-brands-svg-icons";
 
 function Footer() {
-    return (
-        <>
-        <div className="section">
-            <div className="sec-1">
-                <img src={footerlogo} alt="" />
-                <ul>
-                    <li>
-                        <img src={applelogo} alt="" />
-                    </li>
-                    <li>
-                        <img src={playstorelogo} alt="" />
-                    </li>
-                </ul>
-                <p>Company #490039-45, Registered with <br />House of compaines.</p>
+  return (
+    <>
+      <footer className="footer">
+        <div className="footer-container">
+
+          {/* Left Section - Logo & Store Buttons */}
+          <div className="footer-section">
+            <img src={logo} alt="logo" className="footer-logo" />
+
+            <div className="store-buttons">
+              <img src={apple} alt="App Store" />
+              <img src={google} alt="Play Store" />
             </div>
-            <div className="sec-2">
-                <div className="subscribe-box">
-                    <h3>Get Exclusive Deals in your Inbox</h3>
-                    <form>
-                        <div className="input-group">
-                            <input type="email" placeholder="youremail@gmail.com" required />
-                            <button type="submit">Subscribe</button>
-                        </div>
-                    </form>
-                </div>
-                <p >we want spam, read our emailpolicy</p>
-                <ul className="social-icons">
-                    <li><FontAwesomeIcon icon={faFacebook} /></li>
-                    <li><FontAwesomeIcon icon={faSquareInstagram} /></li>
-                    <li><FontAwesomeIcon icon={faTiktok} /></li>
-                    <li><FontAwesomeIcon icon={faSnapchat} /></li>
-                </ul>
+
+            <p className="company-text">
+              Company # 490039-445, Registered with House of companies.
+            </p>
+          </div>
+
+          {/* Middle Section - Subscribe Box */}
+          <div className="footer-section subscribe-section">
+            <h4>Get Exclusive Deals in your Inbox</h4>
+            <div className="subscribe-box">
+              <input type="email" placeholder="youremail@gmail.com" />
+              <button>Subscribe</button>
             </div>
-            <div className="sec-3">
-                <ul>
-                    <h4>Legal Pages </h4>
-                    <li>Terms and Condition <hr width="120px" color="black" /></li>
-                    <li>Privacy <hr width="40px" color="black" /></li>
-                    <li>Cookies <hr width="50px" color="black" /></li>
-                    <li>Modern Slavery Statement <hr width="150px" color="black" /></li>
-                </ul>
-                <ol>
-                    <h4>Important Links </h4>
-                    <li>Get help <hr width="50px" color="black" /></li>
-                    <li>Add your restaurant <hr width="110px" color="black" /></li>
-                    <li>Sign up to deliver <hr width="100px" color="black" /></li>
-                    <li>Create a business account <hr width="150px" color="black" /></li>
-                </ol>
+            <p className="email-policy">
+              we wont spam, read our <a href="#">email policy</a>
+            </p>
+
+            <div className="social-icons">
+              <FontAwesomeIcon icon={faFacebook} />
+              <FontAwesomeIcon icon={faInstagram} />
+              <FontAwesomeIcon icon={faTiktok} />
+              <FontAwesomeIcon icon={faSnapchat} />
             </div>
-        </div>    
-            <footer>
-                <label htmlFor="footer">Order.uk Copyright 2024, All Rights Reserved</label>
-                <ul>
-                    <li>Privacy Policy</li>
-                    <li>Terms</li>
-                    <li>Pricing</li>
-                    <li>Do not sell my personal information</li>
-                </ul>
-            </footer>
-        </>
-    );
+          </div>
+
+          {/* Right Section - Links */}
+          <div className="footer-section links-section">
+            <div>
+              <h4>Legal Pages</h4>
+              <a href="#">Terms and conditions</a>
+              <a href="#">Privacy</a>
+              <a href="#">Cookies</a>
+              <a href="#">Modern Slavery Statement</a>
+            </div>
+
+            <div>
+              <h4>Important Links</h4>
+              <a href="#">Get help</a>
+              <a href="#">Add your restaurant</a>
+              <a href="#">Sign up to deliver</a>
+              <a href="#">Create a business account</a>
+            </div>
+          </div>
+        </div>
+      </footer>
+
+      {/* Bottom Bar */}
+      <div className="footer-bottom">
+        <p>Order.uk Copyright 2024, All Rights Reserved.</p>
+        <div className="bottom-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms</a>
+          <a href="#">Pricing</a>
+          <a href="#">Do not sell or share my personal information</a>
+        </div>
+      </div>
+    </>
+  );
 }
 
-{/* <p>© 2023 Delivery Website</p> */}
 export default Footer;

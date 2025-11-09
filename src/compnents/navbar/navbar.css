@@ -1,3 +1,4 @@
+/* MAIN NAVBAR */
 .navbar {
     display: flex;
     align-items: center;
@@ -16,15 +17,30 @@
     height: 40px;
 }
 
-.navbar ul {
+/* DESKTOP MENU */
+.menu-desktop {
     display: flex;
     gap: 2rem;
 }
 
-.navbar li {
+.navlink {
+    text-decoration: none;
+    color: black;
     font-weight: 600;
 }
 
+/* ACTIVE LINK */
+a.active {
+    background-color: #FC8A06;
+    color: white !important;
+    width: 120px;
+    height: 30px;
+    border-radius: 20px;
+    text-align: center;
+    padding-top: 5px;
+}
+
+/* LOGIN BUTTON */
 .navbar button {
     padding: 0.9rem 2rem;
     border: none;
@@ -33,50 +49,98 @@
     color: white;
     cursor: pointer;
     font-weight: bolder;
-    transition: transform 0.2s, background-color 0.2s;
+    transition: .2s;
 }
 
 .navbar button:hover {
     background-color: #FC8A06;
-    color: white;
-    transform: scale(1.1);
-}
-
-a.active {
-    background-color: #FC8A06;
-    color: white;
-    width: 120px;
-    height: 30px;
-    border-radius: 20px;
-    text-align: center;
-    padding-top: 5px;
-}
-
-.navlink {
-    text-decoration: none;
-    color: black;
+    transform: scale(1.08);
 }
 
 .user-icon {
     margin-right: 0.5rem;
     color: #FC8A06;
-    font-size: larger
+    font-size: larger;
 }
 
-.user-icon:hover {
-    color: rgb(9, 9, 44);
+/* HAMBURGER ICON */
+.menu-icon {
+    display: none;
+    font-size: 1.8rem;
+    cursor: pointer;
 }
 
-@media (min-width: 768px) and (max-width: 1024px) {
-    .navbar {
-        margin-left: -0.1px;
-        width: 100% !important;
-    }
+/* ✅ FULL SCREEN MOBILE DRAWER */
+.mobile-drawer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    background-color: white;
+    transform: translateX(100%);
+    transition: transform .35s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem;
+    z-index: 999;
 }
 
-@media (max-width: 768px) and (min-width: 300px) {
-    .navbar ul {
+/* When open */
+.mobile-drawer.open {
+    transform: translateX(0);
+}
+
+/* Drawer Header */
+.drawer-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.drawer-header img {
+    height: 40px;
+}
+
+.close-icon {
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+/* Drawer Menu List */
+.drawer-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-top: 3rem;
+    padding-left: 0;
+}
+
+.drawer-login {
+    margin-top: auto;
+    padding: 1rem;
+    border: none;
+    border-radius: 12px;
+    background-color: #FC8A06;
+    color: white;
+    font-size: 1.1rem;
+}
+
+/* ✅ RESPONSIVE: Hide desktop menu on mobile */
+@media (max-width: 768px) {
+    .menu-desktop {
         display: none;
-        justify-self: center;
+    }
+    .menu-icon {
+        display: block;
+        text-align: center;
+    }
+    .navbar {
+        width: 95%;
+        margin-left: 2.5%;
+        border-radius: 20px;
+    }
+    .user {
+        display: none;
     }
 }

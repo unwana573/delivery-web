@@ -11,7 +11,7 @@
     padding-left: 50px;
     margin-bottom: 5%;
     height: 450px;
-    max-width: 1200px;
+    /* max-width: 100%; */
     width: auto;
     border-radius: 15px;
 }
@@ -79,7 +79,7 @@ span {
     padding-left: 5%;
     left: 25%;
     z-index: 2;
-    top: 80px;
+    top: 95px;
     border-radius: 15px;
 }
 
@@ -87,13 +87,14 @@ span {
     z-index: 2;
     height: 380px;
     right: 120px;
-    top: 50px;
+    top: 60px;
     position: relative;
 }
 
 .hero-3 {
     position: absolute;
-    width: 393px;
+    /* width: 339px; */
+    width: 41%;
     height: 396px;
     left: 875px; 
     top: 212px; 
@@ -144,7 +145,7 @@ span {
 
 @media (min-width: 768px) and (max-width: 1024px) {
     .hero {
-        max-width: 730px;
+        min-width: 730px;
         width: auto;
         justify-self: center;
     }

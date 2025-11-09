@@ -7,6 +7,7 @@ function Hero() {
     return (
         <>
             <div className="hero">
+                
                 <div className="hero-1">
                     <h5>Order Restaurant food, takeaway and groceries.</h5>
                     <h1>Feast Your Senses, <br /> <span>Fast and Fresh</span></h1>
@@ -22,10 +23,12 @@ function Hero() {
                     </div>
                     </form>
                 </div>
+
                 <div className="hero-2">
                     <img className="img-1" src={ she } alt="hero-img" />
                     <img className="img-2" src={ pizza }  alt="hero-img" />
                 </div>
+
                 <div className="hero-3">
                     <h1></h1>
                     <li className="sub-1">
@@ -44,6 +47,7 @@ function Hero() {
                         <p>They`re almost there-get ready!</p>
                     </li>
                 </div>
+
             </div>
         </>
     );
