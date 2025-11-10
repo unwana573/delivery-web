@@ -1,4 +1,4 @@
-import OrderPage from "../compnents/all/all";
+import OrderPage from "../compnents/all/Orderpage";
 import Info from "../compnents/info/info";
 import Mac from "../compnents/mac/mac";
 import Map from "../compnents/map/map";

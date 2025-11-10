@@ -1,4 +1,4 @@
-import All from "../compnents/all/all";
+// import All from "../compnents/all/all";
 import Info from "../compnents/info/info";
 import Mac from "../compnents/mac/mac";
 import Map from "../compnents/map/map";

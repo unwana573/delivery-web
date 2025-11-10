@@ -76,7 +76,7 @@ span {
     position: absolute;
     /* padding-left: 5%; */
     /* noddle */
-    right: 380px;
+    right: 330px;
     z-index: 2;
     top: 90px;
     border-radius: 15px;
@@ -85,7 +85,7 @@ span {
 .img-2 {
     z-index: 2;
     height: 380px;
-    right: 500px;
+    right: 400px;
     top: 58px;
     /* bottom: 20px; */
     /* //pizza */
@@ -95,9 +95,9 @@ span {
 .hero-3 {
     position: absolute;
     width: 339px;
-    width: 31%;
+    /* width: 31%; */
     height: 396px;
-    left: 920px; 
+    left: 862px; 
     top: 195px; 
     background: #FC8A06;
     border-top-left-radius: 150px;
