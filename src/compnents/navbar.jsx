@@ -33,7 +33,7 @@ function Navbar() {
             </div>
 
             {/* ✅ Full Screen Mobile Drawer */}
-            <div className={`mobile-drawer ${menuOpen ? "open" : ""}`}>
+            {/* <div className={`mobile-drawer ${menuOpen ? "open" : ""}`}>
 
                 <div className="drawer-header">
                     <img src={logo} alt="logo" />
@@ -57,7 +57,7 @@ function Navbar() {
                 </button>
 
                 
-            </div>
+            </div> */}
         </>
     );
 }

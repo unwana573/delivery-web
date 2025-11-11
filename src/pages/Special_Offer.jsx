@@ -1,16 +1,11 @@
-// import All from "../compnents/all/all";
-// import Info from "../compnents/info/info";
-// import Mac from "../compnents/mac/mac";
-// import Map from "../compnents/map/map";
-// import Offer from "../compnents/offers/offers";
-// import Review from "../compnents/review/review";
+import Hero from "../compnents/hero/hero";
 
-// function Special_Offer(params) {
-//     return (
-//         <>
-        
-//         </>
-//     );
-// }
+function Special_Offer(params) {
+    return (
+        <>
+            <Hero />
+        </>
+    );
+}
 
-// export default Special_Offer;
+export default Special_Offer;

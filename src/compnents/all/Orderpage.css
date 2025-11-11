@@ -689,7 +689,7 @@
 }
 
 .modal-total-pay {
-  background-color: #ff8c42;
+  background-color: #047857;
   color: #fff;
   padding: 16px 20px;
   border-radius: 8px;
@@ -919,5 +919,365 @@
 @keyframes spin {
   to {
     transform: rotate(360deg);
+  }
+}
+
+/* Mobile Responsive Styles */
+@media (max-width: 1024px) {
+  .order-layout {
+    grid-template-columns: 200px 1fr 300px;
+  }
+
+  .page-title {
+    font-size: 24px;
+  }
+
+  .search-container {
+    width: 220px;
+  }
+}
+
+@media (max-width: 768px) {
+  .order-layout {
+    grid-template-columns: 1fr;
+    position: relative;
+  }
+
+  /* Hide desktop sidebar on mobile */
+  .sidebar {
+    display: none;
+  }
+
+  /* Hide desktop basket sidebar on mobile */
+  .basket-sidebar {
+    display: none;
+  }
+
+  /* Main content takes full width */
+  .main-content {
+    padding: 20px;
+  }
+
+  .header {
+    flex-direction: column;
+    gap: 16px;
+    align-items: stretch;
+  }
+
+  .page-title {
+    font-size: 20px;
+  }
+
+  .search-container {
+    width: 100%;
+  }
+
+  .content-header {
+    flex-direction: column;
+    gap: 12px;
+    align-items: stretch;
+  }
+
+  .sort-button {
+    width: 100%;
+  }
+
+  /* Product cards */
+  .product-card {
+    padding: 16px;
+  }
+
+  .product-name {
+    font-size: 18px;
+  }
+
+  .price-buttons {
+    flex-direction: column;
+  }
+
+  .price-button {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .xl-button {
+    width: 100%;
+  }
+
+  /* Mobile navigation bar */
+  .mobile-nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #fff;
+    border-top: 1px solid #e5e7eb;
+    padding: 12px;
+    display: flex;
+    justify-content: space-around;
+    z-index: 100;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .mobile-nav-button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #6b7280;
+    font-size: 12px;
+    padding: 8px 12px;
+    border-radius: 8px;
+    transition: all 0.2s;
+  }
+
+  .mobile-nav-button.active {
+    background-color: #059669;
+    color: #fff;
+  }
+
+  .mobile-nav-badge {
+    position: absolute;
+    top: -4px;
+    right: -4px;
+    background-color: #ff8c42;
+    color: #fff;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 11px;
+    font-weight: 700;
+  }
+
+  /* Mobile drawer for categories */
+  .mobile-drawer-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 200;
+  }
+
+  .mobile-drawer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 80%;
+    max-width: 300px;
+    background-color: #fff;
+    z-index: 201;
+    overflow-y: auto;
+    animation: slideInLeft 0.3s ease-out;
+  }
+
+  .mobile-drawer-header {
+    padding: 20px;
+    background-color: #059669;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .mobile-drawer-title {
+    font-size: 20px;
+    font-weight: 700;
+    margin: 0;
+  }
+
+  .mobile-drawer-close {
+    background: none;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    padding: 4px;
+  }
+
+  .mobile-drawer-content {
+    padding: 20px;
+  }
+
+  /* Mobile basket drawer */
+  .mobile-basket-drawer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #fff;
+    z-index: 201;
+    max-height: 85vh;
+    overflow-y: auto;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.15);
+    animation: slideInUp 0.3s ease-out;
+  }
+
+  .mobile-basket-header {
+    padding: 20px;
+    background-color: #059669;
+    color: #fff;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+  }
+
+  .mobile-basket-content {
+    padding: 20px;
+  }
+
+  /* Modal adjustments for mobile */
+  .modal-content {
+    max-width: 95%;
+    max-height: 95vh;
+  }
+
+  .modal-body {
+    padding: 16px;
+  }
+
+  .modal-delivery-options {
+    grid-template-columns: 1fr;
+  }
+
+  .order-sent-modal {
+    max-width: 90%;
+    padding: 36px 24px;
+  }
+
+  .order-sent-title {
+    font-size: 28px;
+  }
+
+  /* Add padding bottom to main content for mobile nav */
+  .main-content {
+    padding-bottom: 100px;
+  }
+
+  /* Mobile floating cart button */
+  .mobile-cart-fab {
+    position: fixed;
+    bottom: 80px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #059669;
+    color: #fff;
+    border: none;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 99;
+  }
+
+  .mobile-cart-badge {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: #ff8c42;
+    color: #fff;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: 700;
+    border: 2px solid #fff;
+  }
+}
+
+@media (max-width: 480px) {
+  .main-content {
+    padding: 16px;
+  }
+
+  .page-title {
+    font-size: 18px;
+  }
+
+  .category-title {
+    font-size: 20px;
+  }
+
+  .product-card {
+    padding: 12px;
+  }
+
+  .product-name {
+    font-size: 16px;
+  }
+
+  .product-desc {
+    font-size: 13px;
+  }
+
+  .price-button {
+    padding: 8px 16px;
+    font-size: 13px;
+  }
+
+  .modal-header h2 {
+    font-size: 20px;
+  }
+
+  .modal-total-pay span:last-child {
+    font-size: 24px;
+    color: white;
+  }
+
+  .fix{
+    color: white;
+  }
+
+  .order-sent-title {
+    font-size: 24px;
+  }
+
+  .order-sent-icon {
+    width: 64px;
+    height: 64px;
+  }
+
+  .order-sent-icon svg {
+    width: 36px;
+    height: 36px;
+  }
+}
+
+/* Animations for mobile drawers */
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInUp {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0);
   }
 }

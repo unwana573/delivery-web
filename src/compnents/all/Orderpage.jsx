@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
-import { ShoppingCart, Clock, MapPin, Search, Plus, X } from 'lucide-react';
-import './Orderpage.css';
+import React, { useState, useEffect } from 'react';
+import { ShoppingCart, Clock, MapPin, Search, Plus, X, Menu } from 'lucide-react';
+import './OrderPage.css';
 
 export default function OrderPage() {
   const [activeCategory, setActiveCategory] = useState('Pizzas');
@@ -9,6 +9,9 @@ export default function OrderPage() {
   const [basket, setBasket] = useState([]);
   const [showCheckout, setShowCheckout] = useState(false);
   const [orderSent, setOrderSent] = useState(false);
+  const [showMobileMenu, setShowMobileMenu] = useState(false);
+  const [showMobileBasket, setShowMobileBasket] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
 
   const categories = [
     'Pizzas', 'Garlic Bread', 'Calzone', 'Kebabs', 'Salads',
@@ -227,6 +230,7 @@ export default function OrderPage() {
 
   const handleCheckout = () => {
     setOrderSent(true);
+    setShowMobileBasket(false);
     setTimeout(() => {
       setOrderSent(false);
       setShowCheckout(false);
@@ -254,6 +258,15 @@ export default function OrderPage() {
     else if (sortOrder === 'asc') setSortOrder('desc');
     else setSortOrder('none');
   };
+
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
 
   return (
     <>
@@ -349,7 +362,7 @@ export default function OrderPage() {
           )}
         </div>
 
-        {/* Basket Sidebar */}
+        {/* Basket Sidebar - Desktop */}
         <div className="basket-sidebar">
           <div className="open-time-banner">
             <Clock size={20} />
@@ -467,6 +480,152 @@ export default function OrderPage() {
         </div>
       </div>
 
+      {/* Mobile Navigation */}
+      {isMobile && (
+        <>
+          <div className="mobile-nav">
+            <button className="mobile-nav-button" onClick={() => setShowMobileMenu(true)}>
+              <Menu size={24} />
+              <span>Menu</span>
+            </button>
+            <button className="mobile-nav-button" onClick={() => setShowMobileBasket(true)}>
+              <div style={{ position: 'relative' }}>
+                <ShoppingCart size={24} />
+                {basket.length > 0 && (
+                  <span className="mobile-nav-badge">{basket.length}</span>
+                )}
+              </div>
+              <span>Basket</span>
+            </button>
+          </div>
+
+          {/* Mobile Menu Drawer */}
+          {showMobileMenu && (
+            <>
+              <div className="mobile-drawer-overlay" onClick={() => setShowMobileMenu(false)} />
+              <div className="mobile-drawer">
+                <div className="mobile-drawer-header">
+                  <h2 className="mobile-drawer-title">Menu</h2>
+                  <button onClick={() => setShowMobileMenu(false)} className="mobile-drawer-close">
+                    <X size={24} />
+                  </button>
+                </div>
+                <div className="mobile-drawer-content">
+                  <ul className="category-list">
+                    {categories.map((cat) => (
+                      <li
+                        key={cat}
+                        onClick={() => {
+                          setActiveCategory(cat);
+                          setShowMobileMenu(false);
+                        }}
+                        className={`category-item ${activeCategory === cat ? 'active' : ''}`}
+                      >
+                        {cat}
+                      </li>
+                    ))}
+                  </ul>
+                  <div className="promo-card">
+                    <div className="promo-badge">-20%</div>
+                    <p className="promo-label">Special Offer</p>
+                    <p className="promo-title">First Order Discount</p>
+                    <button className="promo-button">
+                      <Plus size={20} />
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </>
+          )}
+
+          {/* Mobile Basket Drawer */}
+          {showMobileBasket && (
+            <>
+              <div className="mobile-drawer-overlay" onClick={() => setShowMobileBasket(false)} />
+              <div className="mobile-basket-drawer">
+                <div className="mobile-basket-header">
+                  <h2 className="basket-title">
+                    <ShoppingCart size={24} />
+                    My Basket
+                  </h2>
+                  <button onClick={() => setShowMobileBasket(false)} className="mobile-drawer-close">
+                    <X size={24} />
+                  </button>
+                </div>
+                <div className="mobile-basket-content">
+                  {basket.length === 0 ? (
+                    <div className="empty-basket">
+                      <ShoppingCart size={48} />
+                      <p className="empty-title">Your basket is empty</p>
+                      <p className="empty-subtitle">Add items to get started!</p>
+                    </div>
+                  ) : (
+                    <>
+                      {basket.map((item) => (
+                        <div key={item.id} className="basket-item">
+                          <div className="item-qty-badge">{item.qty}x</div>
+                          <div className="item-details">
+                            <div className="item-header">
+                              <p className="item-name">{item.name}</p>
+                              <p className="item-price">£{(item.price * item.qty).toFixed(2)}</p>
+                            </div>
+                            {item.extra && <p className="item-extra">{item.extra}</p>}
+                          </div>
+                        </div>
+                      ))}
+                      
+                      <div className="basket-footer">
+                        <div className="total-row">
+                          <span className="total-label">Sub Total:</span>
+                          <span className="total-value">£{subtotal.toFixed(2)}</span>
+                        </div>
+                        <div className="total-row">
+                          <span className="total-label">
+                            Discounts: {discount > 0 && <span className="discount-note">(10% off)</span>}
+                          </span>
+                          <span className={`total-value ${discount > 0 ? 'discount' : ''}`}>
+                            {discount > 0 ? `-£${discount.toFixed(2)}` : '£0.00'}
+                          </span>
+                        </div>
+                        <div className="total-row delivery-row">
+                          <span className="total-label">
+                            Delivery Fee: {deliveryFee === 0 && <span className="free-note">(Free)</span>}
+                          </span>
+                          <span className={`total-value ${deliveryFee === 0 ? 'free' : ''}`}>
+                            {deliveryFee === 0 ? 'FREE' : `£${deliveryFee.toFixed(2)}`}
+                          </span>
+                        </div>
+
+                        <div className="total-pay">
+                          <div className="total-pay-label">Total to pay</div>
+                          <div className="total-pay-amount">£{total.toFixed(2)}</div>
+                        </div>
+
+                        {subtotal < 50 && (
+                          <p className="promo-tip spend-more">
+                            💡 Spend £{(50 - subtotal).toFixed(2)} more to get 10% off!
+                          </p>
+                        )}
+
+                        {subtotal < 30 && (
+                          <p className="promo-tip delivery-tip">
+                            🚚 Spend £{(30 - subtotal).toFixed(2)} more for free delivery!
+                          </p>
+                        )}
+
+                        <button onClick={handleCheckout} className="checkout-button">
+                          Checkout!
+                        </button>
+                      </div>
+                    </>
+                  )}
+                </div>
+              </div>
+            </>
+          )}
+        </>
+      )}
+
       {/* Checkout Modal */}
       {showCheckout && !orderSent && (
         <div className="modal-overlay">
@@ -519,7 +678,7 @@ export default function OrderPage() {
                 </div>
 
                 <div className="modal-total-pay">
-                  <span>Total to pay</span>
+                  <span className='fix'>Total to pay</span>
                   <span>£{total.toFixed(2)}</span>
                 </div>
 

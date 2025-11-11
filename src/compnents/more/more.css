@@ -1,97 +1,122 @@
+/* --- Base Styles (Desktop/Tablet First) --- */
 .more {
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: #e7e6e6;
-    max-width: 89%;
-    margin-left: 80px;
-    margin-bottom: 50px;
-    padding-bottom: 50px;
-    padding-top: 50px;
+    max-width: 89%; /* Keeps it contained */
+    margin: 50px auto; /* Centers the whole block horizontally */
+    padding: 50px 20px; /* Adjusted padding */
     border-radius: 15px;
+    gap: 40px; /* Added gap for spacing between more-1 and more-2 */
 }
 
 .more-1 img {
-    position: relative;
     height: 350px;
+    max-width: 100%; /* Ensures image won't overflow */
+    object-fit: contain;
 } 
 
-.more-2  {
-    text-align: center;
-}
-
-.more-2 p  {
-    margin-left: 18%;
-    font-size: 15px;
+.more-2 {
+    text-align: left; /* Changed from center for better flow on larger screens */
+    max-width: 450px; /* Constrain text block width */
 }
 
 .more-2 h1 {
     font-size: 50px;
     font-weight: bold;
     color: rgb(5, 5, 48);
+    margin-bottom: 5px;
 }
 
 .more-2 h2 {
     color: #e7e6e6;
     background-color: rgb(5, 5, 48);
-    width: 500px;
+    width: fit-content; /* Use content size instead of fixed 500px */
     font-size: 40px;
     border-radius: 25px;
     text-align: center;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding: 10px 25px; /* Added horizontal padding */
+    margin-bottom: 20px;
+}
+
+.more-2 p {
+    /* Removed margin-left to align with h1/h2 */
+    font-size: 15px;
+    margin-bottom: 25px;
 }
 
 .more-2 ul {
     display: flex;
     gap: 15px;
     align-items: center;
-    padding-left: 100px;
+    padding-left: 0; /* Removed fixed padding-left */
+    list-style: none; /* Remove list bullet points */
 }
 
 .more-2 ul img {
     height: 45px;
 }
 
-@media (min-width: 768px) and (max-width: 1024px) {
+/* --- Media Query for Medium Screens (Tablets) --- */
+@media (max-width: 1024px) {
     .more {
-        /* display: block; */
-        width: 1000px;
-        margin: 55px;
-        /* padding: 100px; */
-    }     
-    .more-1 {
-        justify-self: center;
-        padding-bottom: 10px;
+        max-width: 95%; /* Use more width on tablets */
+        padding: 40px 15px;
+        gap: 20px;
     }
-    .more-2 {
-        justify-self: center;
-        padding-bottom: 10px;
+    .more-2 h1 {
+        font-size: 40px;
     }
     .more-2 h2 {
-        width: 400px;
+        font-size: 30px;
+        padding: 8px 20px;
     }
+    .more-1 img {
+        height: 300px;
+    } 
 }
 
-@media (max-width: 768px) and (min-width: 300px) {
+/* --- Media Query for Small Screens (Mobile Phones) --- */
+@media (max-width: 768px) {
     .more {
-        display: block;
-        width: 1000px;
-        margin: 0 25px;
-        /* padding: 100px; */
-    }     
-    .more-1 {
-        justify-self: center;
-        padding-bottom: 10px;
+        /* Stack elements vertically */
+        flex-direction: column; 
+        max-width: 95%; 
+        margin: 30px auto;
+        padding: 30px 10px;
     }
+
+    .more-1 img {
+        height: 250px; /* Smaller image on mobile */
+        margin-bottom: 10px;
+    }
+    
     .more-2 {
-        justify-self: center;
-        padding-bottom: 10px;
+        text-align: center; /* Center text block content */
+        max-width: 100%;
+        padding: 0 10px;
     }
+
+    .more-2 h1 {
+        font-size: 32px;
+    }
+    
     .more-2 h2 {
-        width: 400px;
+        font-size: 24px;
+        /* Center the h2 block itself */
+        margin-left: auto;
+        margin-right: auto;
+        padding: 6px 15px;
     }
-    .more-2 ul img {
-        /* padding-right: 1000%; */
+
+    .more-2 ul {
+        /* Center the app store icons */
+        justify-content: center; 
+        padding-left: 0;
     }
+    
+    /* .more-2 p {
+        /* Removed margin-left, text-align: center takes care of centering 
+    } */
 }
