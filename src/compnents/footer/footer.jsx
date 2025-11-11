@@ -1,5 +1,5 @@
 import "./footer.css";
-import logo from "../../assets/logo.png";
+import logo from "../../assets/applestore,png";
 import apple from "../../assets/applestore.png";
 import google from "../../assets/playstore.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
