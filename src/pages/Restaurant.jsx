@@ -1,8 +1,8 @@
-import Info from "../compnents/info/info";
-import Mac from "../compnents/mac/mac";
-import Map from "../compnents/map/map";
-import Offer from "../compnents/offers/offers";
-import Review from "../compnents/review/review";
+import Info from "../components/info/info";
+import Mac from "../components/mac/mac";
+import Map from "../components/map/map";
+import Offer from "../components/offers/offers";
+import Review from "../components/review/review";
 
 function Restaurant(params) {
     return (

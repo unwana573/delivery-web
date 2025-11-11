@@ -1,4 +1,4 @@
-import Hero from "../compnents/hero/hero";
+import Hero from "../components/hero/hero";
 
 function Special_Offer(params) {
     return (

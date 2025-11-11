@@ -1,10 +1,10 @@
-import Chef from "../compnents/chef/chef";
-import Exclusive from "../compnents/exclusive/exclusive";
-import FAQSection from "../compnents/FAQSection/FAQSection";
-import Fig from "../compnents/fig/fig";
-import Hero from "../compnents/hero/hero";
-import More from "../compnents/more/more";
-import Order from "../compnents/order/order";
+import Chef from "../components/chef/chef";
+import Exclusive from "../components/exclusive/exclusive";
+import FAQSection from "../components/FAQSection/FAQSection";
+import Fig from "../components/fig/fig";
+import Hero from "../components/hero/hero";
+import More from "../components/more/more";
+import Order from "../components/order/order";
 
 function Home(params) {
     return (

@@ -6,7 +6,7 @@ import Browse_Menu from './pages/Browse_Menu'
 import Special_Offer from './pages/Special_Offer'
 import Restaurant from './pages/Restaurant'
 import Track_Order from './pages/Track_Order'
-import Footer from './compnents/footer/footer'
+import Footer from './components/footer/footer'
 
 function App() {
 
