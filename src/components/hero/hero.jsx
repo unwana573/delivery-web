@@ -1,7 +1,7 @@
 import "./Hero.css";
 import pizza from "../../assets/hero_1-removebg-preview.png";
 import she from "../../assets/hero.png";
-import hero_img from "../../assets/logo.png";
+import hero_img from "../../assets/Logo.png";
 
 function Hero() {
     return (
