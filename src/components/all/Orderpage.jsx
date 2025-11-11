@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { ShoppingCart, Clock, MapPin, Search, Plus, X, Menu } from 'lucide-react';
-import './OrderPage.css';
+import './Orderpage.css';
 
 export default function OrderPage() {
   const [activeCategory, setActiveCategory] = useState('Pizzas');
