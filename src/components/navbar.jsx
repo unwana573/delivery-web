@@ -1,6 +1,6 @@
 import { useState } from "react";  
 import "./navbar/navbar.css";
-import logo from "../assets/Logo.png";
+import logo from "../assets/logo.png";
 import { NavLink } from 'react-router-dom';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircleUser } from "@fortawesome/free-regular-svg-icons";
@@ -15,6 +15,11 @@ function Navbar() {
 
                 <img src={logo} alt="logo" />
 
+                {/* Hamburger Icon for Mobile */}
+                <div className="menu-icon" onClick={() => setMenuOpen(true)}>
+                    <FontAwesomeIcon icon={faBars} />
+                </div>
+
                 <ul className="menu-desktop">
                     <NavLink to="/" className="navlink"><li>Home</li></NavLink>
                     <NavLink to="/Browse_Menu" className="navlink"><li>Browse Menu</li></NavLink>
@@ -23,17 +28,13 @@ function Navbar() {
                     <NavLink to="/Track_Order" className="navlink"><li>Track Order</li></NavLink>
                 </ul>
 
-                <button className="user">
+                <button>
                     <FontAwesomeIcon className="user-icon" icon={faCircleUser} />Login/Signup
                 </button>
-
-                <div className="menu-icon" onClick={() => setMenuOpen(true)}>
-                    <FontAwesomeIcon icon={faBars} />
-                </div>
             </div>
 
             {/* ✅ Full Screen Mobile Drawer */}
-            {/* <div className={`mobile-drawer ${menuOpen ? "open" : ""}`}>
+            <div className={`mobile-drawer ${menuOpen ? "open" : ""}`}>
 
                 <div className="drawer-header">
                     <img src={logo} alt="logo" />
@@ -55,9 +56,7 @@ function Navbar() {
                 <button className="drawer-login">
                     <FontAwesomeIcon className="user-icon" icon={faCircleUser} />Login/Signup
                 </button>
-
-                
-            </div> */}
+            </div>
         </>
     );
 }
